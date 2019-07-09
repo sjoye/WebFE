@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>寻回网</title>
+    <link rel="stylesheet" href="./js/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/top.css">
+    <link rel="stylesheet" href="./css/city.css">
+    <link rel="stylesheet" href="./css/drop-down.css" />
+</head>
+<body>
+
+<div class="head">
+    <div class="logotop">
+        <div class="logo">
+            <div class="logoA">
+                <div class="logoB">
+                    <div class="logoC">
+                        <div class="logoD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-font">寻回网</div>
+    <div class="h-font" style="font-size: 26px;margin: 23px -1px 0 8px">|</div>
+    <div class="h-font" style="margin-left:8px">
+        <input class="city" id="citySelect" value="南宁市" readonly="readonly" name="zone">
+    </div>
+
+    <div class="nav">
+        <ul class="nav-main">
+            <li class="toptag" id="li-1">产品</li>
+            <li class="toptag" id="li-2">企业简介</li>
+            <li class="toptag" id="li-3">解决方案</li>
+            <li class="toptag">联系方式</li>
+            <li class="toptag">招贤纳士</li>
+        </ul>
+
+        <div id="box-1" class="hidden-box hidden1">
+            <ul>
+                <a href="#" class="ulfont" onclick="spost()"><li>失物招领</li></a>
+                <a href="#" class="ulfont" onclick="wpost()"><li>寻物启事</li></a>
+                <a href="#" class="ulfont" onclick="rpost()"><li>寻人启事</li></a>
+            </ul>
+        </div>
+        <div id="box-2" class="hidden-box hidden2">
+            <ul>
+                <a href="#" class="ulfont"><li>综合</li></a>
+                <a href="#" class="ulfont"><li>手机数码</li></a>
+                <a href="#" class="ulfont"><li>卡证钱包</li></a>
+            </ul>
+        </div>
+        <div id="box-3" class="hidden-box hidden3">
+            <ul>
+                <a href="#" class="ulfont"><li>综合</li></a>
+                <a href="#" class="ulfont"><li>手机数码</li></a>
+                <a href="#" class="ulfont"><li>卡证钱包</li></a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="ppt">
+
+        <section class="show">
+            <span class="showfont" style="margin: 0 auto;color:transparent !important">1995 ——&nbsp;</span>
+            <span class="showfont" id="showfont" style="margin: 0 auto;color:transparent !important">2018</span>
+        </section>
+
+    <section class="shownum">
+        <div class="numbers">
+            <span class="number">
+                    <span class="number-inner cmp-animate--to_reveal mobliefix" style="--int: 50%; transition-delay: 0.16s;transition-duration: 1s; margin-top: -1273%">
+                            0<br>1<br>2<br>3<br>4<br>5<br>6<br>9<br>8<br>9
+                    </span>
+            </span>
+            <span class="number">
+                    <span class="number-inner fra cmp-animate--to_reveal pos" style="transition-delay: 0.3s;transition-duration: 1.36s">
+                            3<br>5<br>6<br>7<br>8<br>9<br>0<br>1<br>2<br>3
+                    </span>
+            </span>
+        <span class="showm dot" style="color:transparent !important">&nbsp;周年</span>
+        </div>
+	</section>
+
+    <img src="./img/BG.png" width="100%">
+</div>
+
+<div class="container"></div>
+
+<div class="di">
+    <hr/>
+    <div class="dii">
+        <h6> Copyright &copy; 2017 寻回网. All rights reserved <a href="http://www.miitbeian.gov.cn" target="new" class="foot">桂ICP备15009196号</a></h6>
+        <h6></h6>
+        <h6>
+            <a href="http://www.xunhuiwang.cn/about" class="foot">意见反馈</a>
+        </h6>
+    </div>
+</div>
+
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/layui/layui.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/city.js"></script>
+<script src="./js/supload.js"></script>
+<script src="./js/select-widget-min.js"></script>
+<script>
+    var test=new Vcity.CitySelector({input:'citySelect'});
+
+    function getCookie(name) {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    const bzEasing = function (x) {
+        return -(x-1)*(x-1) + 1
+    }  
+    var time = 0
+    var total = 300;
+    var delta = 23;
+    var id = setInterval(function(){
+        time++;
+        var nowNum = bzEasing(time/total)*delta;
+        $('#showfont').html(1995 + Math.floor(nowNum));
+        if (time>=total) {
+        clearInterval(id);
+        }
+    }, 10);
+
+    $(document).ready(function(){
+        $(".cmp-animate--to_reveal").addClass("cmp-animate--revealed");
+
+        $(".show").animate({opacity:'1'},1666); 
+        $(".shownum").animate({top:"55%",opacity:'1'},999);    
+    });
+  
+</script>
+</body>
+</html>

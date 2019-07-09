@@ -1,0 +1,746 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+html,body{
+    height: 100%;
+}
+body{
+    width:100%;
+    color: white;
+    margin:0 auto;
+    padding:0 auto;
+    overflow-x:hidden;
+    font-family: "微软雅黑 Light";
+}
+
+.head{
+    position: fixed;
+    /* Safari for macOS & iOS */
+    -webkit-backdrop-filter: blur(6px); 
+    /* Google Chrome */
+    backdrop-filter: blur(6px); 
+    /* 设置背景半透明黑色 */
+    background: rgba(0, 0, 0, 0.66);
+    z-index: 99; 
+    width: 100%;
+    height:72px;
+}
+
+.ppta{
+    width: 100%;
+    height: 960px;
+    position: relative;
+    background-position:center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/qsb.png");
+}
+.motto{
+    width: 300px;
+    color: #000;
+    font-size: 36px;
+    white-space: nowrap;
+    z-index: 999;
+    margin: 30px 0 0 -6px;
+    line-height: 188px
+}
+.pptb{
+    width: 100%;
+    height: 960px;
+    position: relative;
+    background-position:center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/m.jpg");
+}
+
+.pptc{
+    width: 100%;
+    height: 960px;
+    position: relative;
+    background-position:center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/imac.jpg");
+}
+
+.pos {
+		--dometer: -89.96%;
+	}
+
+	@media (max-width: 800px) {
+		.pos {
+			--dometer: -89.5%;
+	}
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 149377 */
+    src: url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.eot');
+    src: url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.svg#iconfont') format('svg');
+}
+
+.icon{
+    font-family: iconfont;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.ico{
+    font-family: iconfont;
+    font-size: 23px;
+    font-style: normal;
+}
+
+a.color:link {color: #000  }     /* 未访问的链接 */
+a.color:visited {color: #000  }  /* 已访问的链接*/
+a.color:hover {color: #00efff }   /* 当有鼠标悬停在链接上 */
+a.color:active {color: #000}  /* 被选择的链接 */
+/*nav导航盒子*/
+div.nav{
+    width: 516px;
+    height: 70px;
+    line-height: 66px;
+    text-align: center;
+    font-size: 13px;
+    z-index: 9;
+    float: right;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+/*nav-main*/
+ul.nav-main{
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+/*导航条设置*/
+ul.nav-main>li{
+    width: 116px;
+    height: 100%;
+    display: block;
+    float: left;
+    color: #FFF;
+    margin: 3px 8px 0 0;
+    cursor: pointer;
+}
+ul.nav-main>li:hover{
+    background: none;
+}
+/*隐藏盒子设置*/
+div.hidden-box{
+    width: 118px;
+    line-height: 36px;
+    border: 1px solid #FDE615;
+    border-top: 0;
+    position: absolute;
+    display:none;
+    background: rgba(30, 30, 30, 0.88);
+    top: 70px;
+    z-index:9;
+    font-size: 15px;
+}
+.hidden-box>ul{
+    list-style-type: none;
+    cursor: pointer;
+}
+.hidden-box li:hover{
+    background: rgb(18, 139, 238);
+    color: rgb(255, 255, 255);
+}
+.ulfont{
+    color: rgb(255, 218, 139);
+}
+/*隐藏盒子位置设置*/
+.hidden1{
+    right: 602px;
+}
+.hidden2{
+    right: 480px;
+}
+.hidden3{
+    right: 356px;
+}
+.box04{
+    left:485px;
+}
+
+.di {
+    position: absolute;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    clear: both;
+    bottom: 6px;
+}
+
+.signin{
+    position: absolute;
+    color: #fff;
+    top:42.5%;
+    left: 57%;
+    font-size: 26px;
+}
+
+.fsvg{
+    text-align: center;
+    vertical-align: center;
+    letter-spacing: 3px;
+    line-height: 39px;
+    float:left;
+    font-size: 17px;
+    margin-left: 0px;
+    width: 108px;
+    height: 36px;
+    color: #fff;
+    background-color: #00a2ff;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    cursor: pointer;
+}
+
+.fill{
+    width:10px;
+    float:left;
+    height:36px;
+    background:#FFF;
+}
+.rtag{
+    font-size: 16px;
+    margin: 16px;
+    color: #fff;
+}
+
+.toptag{
+    float: right;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.sign{
+    float: right;
+    margin: 21px 20px 0 0;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 8px;
+    vertical-align: middle;
+    color: #FFF;
+}
+.signbutton{
+    width: 90px;
+    height: 30px;
+    background: none;
+    border: 1px solid rgb(39, 150, 255);
+    font-size: 18px;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.login{
+    float: right;
+    margin: 21px 0 0 0;
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+}
+.loginbutton{
+    width: 90px;
+    height: 30px;
+    background: none;
+    border: 1px solid rgb(39, 150, 255);
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.loginbutton:hover{
+    color: #000;
+    background: #00eeff;
+    transition:all 0.36s linear;
+}
+.signbutton:hover{
+    color: #000;
+    background: #00efff;
+    transition:all 0.36s linear;
+}
+.ti{
+    border: 1px dashed #c9c9c9;
+    border-radius: 8px;
+    padding: 0 6px 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 5px 0 0;
+    color: #25afff
+}
+.bgdiv{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-999;
+    background-color: #000;
+}
+
+.bgdiv img{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.logo{
+    float: left;
+    margin: 0px 10px 0 0;
+}
+
+.logotop{
+    float: left;
+    margin: 9px 0 0 16px;
+}
+
+.h-font{
+    float: left;
+    margin: 23px 0 0 6px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+/*CSS-LOGO*/
+.logoA{
+    width: 53px;
+    height: 53px;
+    background-color:#0ea7ff;
+    overflow:hidden;
+    border-radius: 8px;
+}
+.logoB{
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    overflow:hidden;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 8px;
+    -webkit-animation:circle 3.66s infinite linear;/*匀速*/
+    -moz-animation:circle 3.66s infinite linear;/*匀速*/
+    -o-animation:circle 3.66s infinite linear;/*匀速*/
+    animation:circle 3.66s infinite linear;/*匀速*/
+}
+.logoC{
+    width: 24px;
+    height: 24px;
+    background-color: #0ea7ff;
+    overflow:hidden;
+    border-radius: 50px;
+    margin-left: 7px;
+    margin-top: 7px;
+    -webkit-animation:circle 3.66s infinite linear;/*匀速*/
+    -moz-animation:circle 3.66s infinite linear;/*匀速*/
+    -o-animation:circle 3.66s infinite linear;/*匀速*/
+    animation:circle 3.66s infinite linear;/*匀速*/
+}
+.logoD{
+    width: 12px;
+    height: 12px;
+    background-color: #fff1aa;
+    overflow:hidden;
+    border-radius: 50px;
+    margin-left: 6px;
+    margin-top: 6px;
+    -webkit-animation:scale 3.66s infinite linear;/*匀速*/
+    -moz-animation:scale 3.66s infinite linear;/*匀速*/
+    -o-animation:scale 3.66s infinite linear;/*匀速*/
+    animation:scale 3.66s infinite linear;/*匀速*/
+}
+@-webkit-keyframes circle{
+    0%{ transform:rotate(0deg);}
+    80%{ transform:rotate(0deg);}
+    100%{ transform:rotate(90deg);}
+}
+@-moz-keyframes circle{
+    0%{ transform:rotate(0deg); }
+    80%{ transform:rotate(0deg); }
+    100%{ transform:rotate(90deg); }
+}
+@-o-keyframes circle{
+    0%{ transform:rotate(0deg); }
+    80%{ transform:rotate(0deg); }
+    100%{ transform:rotate(90deg); }
+}
+@keyframes circle{
+    0%{ transform:rotate(0deg); }
+    80%{ transform:rotate(0deg); }
+    100%{ transform:rotate(90deg); }
+}
+@-webkit-keyframes scale{
+    0%{ transform:scale(1);}
+    66%{ transform:scale(1);}
+    73%{ transform:scale(0.6);}
+    80%{ transform:scale(1.36);}
+    85%{ transform:scale(0.7);}
+    90%{ transform:scale(1.2);}
+    93%{ transform:scale(0.8);}
+    97%{ transform:scale(1.3);}
+    100%{ transform:scale(1);}
+}
+@keyframes scale{
+    0%{ transform:scale(1);}
+    66%{ transform:scale(1);}
+    73%{ transform:scale(0.6);}
+    80%{ transform:scale(1.36);}
+    85%{ transform:scale(0.7);}
+    90%{ transform:scale(1.2);}
+    93%{ transform:scale(0.8);}
+    97%{ transform:scale(1.3);}
+    100%{ transform:scale(1);}
+}
+/*****立方体*******/
+.will_rotate{
+    width: 150px;
+    height: 196px;
+    margin: 0 auto;
+    position: relative;
+}
+.rotate_parent, .rotate_parent li {
+    position: absolute;
+    display: block;
+}
+.rotate_parent{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 0 0 32px;
+    -webkit-transform-origin: 50px 50px;
+    transform-origin: 50px 50px;
+    -webkit-transform: rotateX(-33.5deg) rotateY(45deg);
+    transform: rotateX(-33.5deg) rotateY(45deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: willRotate 3s ease-in-out infinite 2s;
+    animation: willRotate 3s ease-in-out infinite alternate;
+    /*animation: name duration timing-function delay iteration-count direction;*/
+    /*name	规定需要绑定到选择器的 keyframe 名称。。*/
+    /*duration	规定完成动画所花费的时间，以秒或毫秒计。*/
+    /*timing-function	规定动画的速度曲线。*/
+    /*delay	规定在动画开始之前的延迟。*/
+    /*iteration-count	规定动画应该播放的次数。*/
+    /*direction	规定是否应该轮流反向播放动画。*/
+    top: 20%;
+    /*left: 50%;*/
+}
+
+.rotate_parent .tip_back, .rotate_parent .tip_front, .rotate_parent .tip_left, .rotate_parent .tip_right, .rotate_parent .tip_top {
+    background: radial-gradient(transparent 30%, rgba(5, 139, 255, 0.2) 100%);
+}
+.rotate_parent li {
+    width: 100px;
+    height: 100px;
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+}
+.rotate_parent .tip_front {
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+}
+.rotate_parent .tip_back {
+    -webkit-transform:translateZ(-50px);
+    transform:translateZ(-50px);
+}
+.rotate_parent .tip_right {
+    -webkit-transform: rotateY(90deg) translateZ(50px);
+    transform: rotateY(90deg) translateZ(50px);
+}
+.rotate_parent .tip_left {
+    -webkit-transform: rotateY(90deg) translateZ(-50px);
+    transform: rotateY(90deg) translateZ(-50px);
+}
+.rotate_parent .tip_top {
+    -webkit-transform: rotateX(90deg) translateZ(50px);
+    transform: rotateX(90deg) translateZ(50px);
+}
+.rotate_parent .tip_bottom{
+    -webkit-transform: rotateX(90deg) translateZ(-50px);
+    transform: rotateX(90deg) translateZ(-50px);
+}
+.rotate_parent .tip_floor {
+    box-shadow: -300px 0 50px rgba(0,0,0,.3);
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    width: 110px;
+    height: 110px;
+    left: 295px;
+    background-color: transparent;
+    -webkit-transform: rotateX(90deg) translateZ(-60px);
+    transform: rotateX(90deg) translateZ(-60px);
+}
+@-webkit-keyframes willRotate{
+    0%{
+        transform:rotateX(-33.5deg) rotateY(45deg);
+    }
+    50%{
+        transform:rotateX(-33.5deg) rotateY(180deg);
+    }
+    100%{
+        transform:rotateX(-33.5deg) rotateY(360deg);
+    }
+}
+@keyframes willRotate{
+    0%{
+        transform:rotateX(-33.5deg) rotateY(45deg);
+    }
+    50%{
+        transform:rotateX(-33.5deg) rotateY(180deg);
+    }
+    100%{
+        transform:rotateX(-33.5deg) rotateY(360deg);
+    }
+}
+.more{
+    position: absolute;
+    opacity: 0;
+    left: 15%;
+    bottom: 16%;
+    width: 360px;
+    text-align: center;
+    color: rgb(216, 216, 216);
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.mfont{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background: #333333;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 0 8px;
+}
+.mline{
+    background: rgb(216, 216, 216);
+    display: inline-block;
+    margin: 0 -5px 3px 0;
+    height: 3px;
+    width: 1px;
+}
+.go{
+    position: absolute;
+    opacity: 0;
+    right: 0%;
+    bottom: 16%;
+    width: 360px;
+    text-align: center;
+    color: rgb(255, 216, 110);
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.gfont{
+    font-size: 18px;
+    font-weight: 600;
+    background: #0C0C0C;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 0 8px;
+}
+.gline{
+    background: rgb(255, 216, 110);
+    display: inline-block;
+    margin: 0  0 3px -5px;
+    height: 3px;
+    width: 1px;
+}
+.bgo{
+    position: absolute;
+    opacity: 0;
+    left: 15%;
+    bottom: 50%;
+    width: 360px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.bfont{
+    font-size: 18px;
+    font-weight: 600;
+    background: rgb(250, 250, 250);
+    padding: 0 6px;
+    margin: 0 5px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.bline{
+    background: rgb(68, 68, 68);
+    display: inline-block;
+    margin: 0  0 3px -5px;
+    height: 3px;
+    width: 1px;
+}
+.cmore{
+    position: absolute;
+    opacity: 0;
+    left: 39.9%;
+    bottom: 18%;
+    width: 360px;
+    text-align: center;
+    color: rgb(216, 216, 216);
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.cfont{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    width: 288px;
+    background: #333333;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 0 5px;
+}
+.cline{
+    background: rgb(216, 216, 216);
+    height: 1px;
+    width: 3px;
+    margin: 5px 0 5px 150px;
+}
+.cgo{
+    position: absolute;
+    opacity: 0;
+    right: 10%;
+    bottom: 9%;
+    width: 360px;
+    text-align: center;
+    color: rgb(255, 216, 110);
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.show{
+    position: absolute;
+    opacity: 0;
+    left: 30%;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.showfont{
+    background-image: url(../img/fontwhite.jpg);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 50px;
+    font-weight: 600;
+}
+.bshow{
+    position: absolute;
+    opacity: 0;
+    right: -80%;
+    top: 26%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.pptbfont{
+    background-image: url(http://img.xunhuiwang.cn/fontblue.png);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 3px
+}
+.cshow{
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 66%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+.pptcfont{
+    background-image: url(http://img.xunhuiwang.cn/orangesmall.jpg);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 50px;
+    letter-spacing: 3px
+}
+.content-wrap{
+	text-align: center;
+	line-height: 180px;
+}
+
+.post-format-content {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin:0 auto;
+	padding: 0;
+	border-radius: 50px;
+	z-index: 8;
+}
+.TXL {
+	width: 100%;
+	height: 180px;
+    font-size:23px;
+    bottom: 0;
+    color: #FFF;
+	text-align: center;
+	background-color: #1cb1f2;
+	animation:deepbreath 10s infinite linear;/*åŒ€é€Ÿ*/
+}
+@keyframes deepbreath{
+    0%{ background-color:#00a1ff}
+    30%{ background-color: #000000}
+    80%{ background-color: #000000}
+    100%{ background-color: #00a1ff}
+}
+
+.text-container{
+    position: relative;
+    height: 36px;
+    width: 180px;
+    z-index: 99999;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ce-text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform .3s;
+    line-height: 36px;
+}
+
+.ce-text:last-child {
+    transform: translateY(36px)
+}
+
+.text-container:hover .ce-text:first-child {
+    transform: translateY(-36px)
+}
+
+.text-container:hover .ce-text:last-child {
+    transform: translateY(0)
+}

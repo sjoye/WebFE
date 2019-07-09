@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ITX装机网</title>
+    <link rel="stylesheet" href="./js/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/top.css">
+</head>
+<body>
+
+<div class="head">
+    <div class="logotop">
+        <div class="logo">
+            <div class="logoA">
+                <div class="logoB">
+                    <div class="logoC">
+                        <div class="logoD">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-font">
+        <span class="ti">ITX</span>装机网
+    </div>
+
+    <div class="sign">
+        <button class="signbutton" onclick="sign()">注册</button>
+    </div>
+    <div class="login">
+        <button class="loginbutton" onclick="login()">登录</button>
+    </div>
+
+    <div class="nav">
+        <ul class="nav-main">
+            <li class="toptag" id="li-1">装机教程</li>
+            <li class="toptag" id="li-2">装机软件</li>
+            <li class="toptag" id="li-3">装机硬件</li>
+            <li class="toptag">ITX论坛</li>
+        </ul>
+        <div id="box-1" class="hidden-box hidden1">
+            <ul>
+                <a href="#" class="ulfont"><li>机箱安装</li></a>
+                <a href="#" class="ulfont"><li>系统安装</li></a>
+                <a href="#" class="ulfont"><li>关于ITX</li></a>
+            </ul>
+        </div>
+        <div id="box-2" class="hidden-box hidden2">
+            <ul>
+                <a href="#" class="ulfont"><li>常用软件</li></a>
+                <a href="#" class="ulfont"><li>硬件测试</li></a>
+                <a href="#" class="ulfont"><li>开发专属</li></a>
+                <a href="#" class="ulfont"><li>桌面美化</li></a>
+                <a href="#" class="ulfont"><li>神秘软件</li></a>
+            </ul>
+        </div>
+        <div id="box-3" class="hidden-box hidden3">
+            <ul>
+                <a href="#" class="ulfont"><li>ITX机箱</li></a>
+                <a href="#" class="ulfont"><li>ITX主板</li></a>
+                <a href="#" class="ulfont"><li>机箱电源</li></a>
+                <a href="#" class="ulfont"><li>散热器</li></a>
+                <a href="#" class="ulfont"><li>显卡</li></a>
+                <a href="#" class="ulfont"><li>内存</li></a>
+                <a href="#" class="ulfont"><li>硬盘</li></a>
+                <a href="#" class="ulfont"><li>外设</li></a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="ppta">
+    <p class="show">
+            <span class="showfont" style="margin: 0 auto;color:transparent !important">玲珑 , 剔透 , 容积仅</span>
+            <span class="showfont" id="showfont" style="margin: 0 auto;color:#fff">15.1</span>
+            <span class="showfont" style="margin: 0 auto;color:#fff">L</span>
+    </p>
+    <p class="more">
+        <span class="mfont">< 进一步了解UMX1 Plus机箱</span>
+        <span class="mline" id="mline"></span>●
+    </p>
+    <p class="go">
+        ●<span class="gline" id="gline"></span>
+        <span class="gfont">立刻选配机箱硬件 ></span>
+    </p>
+</div>
+
+<div class="will_rotate">
+        <div class="motto">            
+            <span class="text-container">
+                <span class="ce-text">专注于打造</span>
+                <span class="ce-text">&nbsp;ITX艺术品</span>
+            </span>
+        </div>
+        <ul class="rotate_parent">
+            <li class="tip_front"></li>
+            <li class="tip_back"></li>
+            <li class="tip_right"></li>
+            <li class="tip_left"></li>
+            <li class="tip_top"></li>
+            <li class="tip_bottom" style="background: radial-gradient(transparent 50%, #6dcaff 100%)"></li>
+            <li class="tip_floor"></li>
+        </ul>
+</div>
+
+<div class="pptb">
+    <p class="bshow">
+        <span class="pptbfont" style="color:transparent !important">冷、静、“掌”控全局</span>
+    </p>
+    <p class="bgo">
+        <span class="bfont">< 立即选配机箱硬件</span>
+        <span class="bline"></span>●
+    </p>
+</div>
+
+<div id="show" class="TXL">
+    <div class="post-format-content">
+      <div class="content-wrap">
+        不仅是机箱 也是桌面艺术品
+      </div>
+    </div>
+  </div>
+
+<div class="pptc">
+        <p class="cshow">
+            <span class="pptcfont" style="margin: 0 auto;color:transparent !important">短小 , 精致 , 更极致</span>
+        </p>
+        <div class="cmore">
+            <div class="cfont">< 进一步了解 Metal Gear+ 机箱</div>
+            <div class="cline"></div>
+        </div>
+        <p class="cgo">
+            ●<span class="gline"></span>
+            <span class="gfont">立刻选配机箱硬件 ></span>
+        </p>
+    </div>
+
+
+
+<!-- <div class="di">
+        <h6> Copyright &copy; 2019 装机网. All rights reserved <a href="http://www.miitbeian.gov.cn" target="new" class="foot">桂ICP备15009196号</a> - Powered by Sjoey Studio</h6>
+</div> -->
+
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/layui/layui.js"></script>
+<script src="./js/main.js"></script>
+
+<script>
+    const bzEasing = function (x) {
+        return -(x-1)*(x-1) + 1
+    }  
+    var time = 0
+    var total = 300;
+    var delta = 91;
+    var id = setInterval(function(){
+        time++;
+        var nowNum = bzEasing(time/total)*delta;
+        $('#showfont').html((60 + Math.floor(nowNum))/10);
+        if (time>=total) {
+        clearInterval(id);
+        }
+    }, 7);
+
+    $(document).ready(function(){
+        $(".show").animate({top:"16.6%",opacity:'1'},1500);
+
+        setTimeout("$('.mline').animate({width:'66px',opacity:'1'},1600)",1888);
+        setTimeout("$('.more').animate({left:'10%',opacity:'1'},1600)",1888)
+        setTimeout("$('.go').animate({right:'-8%',opacity:'1'},1600)",1888)
+        setTimeout("$('.gline').animate({width:'136px',opacity:'1'},1600)",1888);
+    });
+
+    $(function(){
+        $(window).scroll(function() {
+            if($(window).scrollTop() >= 950){ //向下滚动像素大于这个值即出现
+                $(".bshow").animate({top:"10%",opacity:'1'},1500);
+            }
+            if($(window).scrollTop() >= 1650){
+                $(".cshow").animate({top:"36%",opacity:'1'},1500);
+            }
+            if($(window).scrollTop() >= 1088){ 
+                $('.Gotop').fadeIn(300); //淡入时间，越小出现的越快
+                setTimeout("$('.bgo').animate({left:'16%',opacity:'1'},1600)",188)
+                setTimeout("$('.bline').animate({width:'136px',opacity:'1'},1600)",188)
+            }
+            if($(window).scrollTop() >= 1888){ 
+                setTimeout("$('.cgo').animate({right:'29%',opacity:'1'},1600)",88)
+                setTimeout("$('.cmore').animate({left:'39%',opacity:'1'},1600)",1688)
+                setTimeout("$('.cline').animate({height:'160px',opacity:'1'},1600)",1688)
+            }
+        });
+        $('.Gotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 666);});
+    });
+</script>
+</body>
+</html>

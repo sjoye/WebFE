@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>X</title>
+  <style>
+    *{ margin: 0px; padding: 0px; font-family: "微软雅黑"; outline: none;}
+    section{width: 80%; margin: auto; margin-top: 100px; padding:5% ; border: 1px solid white; text-align: center; border-radius: 10px; background: rgba(255,255,255,0.6);}
+    section label{ display: block; line-height: 52px;}
+    section label input{ font-size: 24px; padding-left: 10px; color: blueviolet; border-radius: 30px;}
+    section footer {display: flex; text-align: center;margin-top: 60px; }
+    section footer button{ margin: auto; width:120px ; height: 120px; font-size: 22px; color: white; border: 1px solid white; border-radius: 120px;}
+    section footer .reset{margin-right: 16px; background: #8b95d0;}
+    section footer .begin{ background: rgb(16, 189, 255);}
+    section .showNum{ 
+        height: 90px; 
+        line-height: 90px; 
+        font-size: 100px; 
+        margin-top: 80px;
+        font-weight: bold; 
+        }
+        .showNum{
+            background-image:url(http://img.xunhuiwang.cn/fontblue.png); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            font-size:60px;
+            font-weight:600;
+            text-align: center;
+            width:699px;
+        }
+  </style>
+</head>
+<body>
+
+  <section>
+    <label>
+        起始值：<input type="number" id="begin" value="1" min="1" max="10000" />
+    </label>
+    <label>
+        结束值：<input type="number" id="end" value="50" min="1" max="50000" style="margin-bottom: 100px"/>
+    </label>
+     
+    <div class="showNum" id="showNum" style="margin: 0 auto;color:transparent !important">越努力 越幸运</div><br />
+     
+    <footer>
+        <button id="resetBtn" class="reset">复 位</button>
+        <button id="beginBtn" class="begin">开 始</button>
+    </footer>
+</section>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(document.body).on('click', '#resetBtn', function(){    
+            window.location.reload();
+    });
+ 
+    var arr = [], mydsq = null;    
+     
+    function RunNumFn(){
+        clearInterval(mydsq);
+        var i = 0;
+        mydsq = window.setInterval(function(){ 
+            i++;
+            if(i >= arr.length){
+                i = 0;
+            }
+            $('#showNum').html(arr[i]);
+        }, 8);
+    };
+     
+    $(document.body).on('click', '#beginBtn', function(){
+        var begin = Number($('#begin').val()),
+            end = Number($('#end').val());
+        if(begin < 0){
+            alert("亲：起始值 不能小于 0 哦！");
+            return false;
+        }else if(begin > end){
+            alert("亲：起始值 不能大于 结束值哦！");
+            return false;
+        }
+        else if(end > 50000){
+            alert("亲：结束值 不能大于 50000 哦！");
+            return false;
+        }
+        else{
+            if($(this).text() == '开 始'){
+                for(var i = begin; i <= end; i++){
+                    arr.push(i);
+                }
+                 
+                arr = arr.sort(function(){
+                    return Math.random() - 0.5;
+                })
+                RunNumFn();
+                $(this).text('暂 停').css('background', '#8b95d0');
+            }else{
+                clearInterval(mydsq);
+                arr = [];
+                begin = 0;
+                $(this).text('开 始').css('background', '#52d8e8');
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

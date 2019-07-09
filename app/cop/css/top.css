@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body{
+    width:100%;
+    height:100%;
+    color: white;
+    margin:0 auto;
+    padding:0 auto;
+    overflow-x:hidden;
+    font-family: "微软雅黑 Light";
+}
+
+.head{
+    position: fixed;
+    background: transparent!important;
+    width: 100%;
+    height:100px;
+}
+
+.ppt{
+    width: 100%;
+}
+
+.show{
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 19%;
+    transform: translate(-50%, 50%);
+}
+
+.pos {
+		--dometer: -89.96%;
+	}
+
+	@media (max-width: 800px) {
+		.pos {
+			--dometer: -89.5%;
+	}
+}
+
+.shownum{
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 66%;
+    transform: translate(-50%, 50%);
+}
+
+.showm {
+			background-image: url(http://img.xunhuiwang.cn/orangesmall.jpg);
+			background-position: center;
+			-webkit-background-clip: text;
+			background-clip: text;
+			font-size: 68px;
+      font-weight: 600;
+		}
+
+		.dot {
+			font-size: 36px;
+			font-weight: 600;
+		}
+
+.showfont {
+    background-image: url(http://img.xunhuiwang.cn/orangesmall.jpg);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 68px;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 149377 */
+    src: url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.eot');
+    src: url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_q3ix2yoc8c0g4x6r.svg#iconfont') format('svg');
+}
+
+.numbers {
+			align-items: flex-end;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-flow: row nowrap;
+			white-space: nowrap;
+			overflow: hidden
+		}
+
+		.numbers .number {
+			display: inline-block;
+			line-height: normal;
+			overflow: hidden;
+			height: 66px;
+		}
+
+		.numbers .number .number-inner {
+			background-image: url(http://img.xunhuiwang.cn/orangesmall.jpg);
+			background-position: center;
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent !important;
+			display: block;
+			font-size: 66px;
+			letter-spacing: -1px;
+			line-height: 66px;
+			width: 36px
+		}
+
+		.numbers .number .number-inner.cmp-animate--to_reveal.cmp-animate--revealed {
+			-webkit-transform: translateY(0) translateZ(0);
+			-webkit-transform: translateY(var(--int)) translateZ(0);
+			transform: translateY(0) translateZ(0);
+			transform: translateY(var(--int)) translateZ(0)
+		}
+
+		.numbers .number .number-inner.fra.cmp-animate--to_reveal.cmp-animate--revealed {
+			-webkit-transform: translateY(0) translateZ(0);
+			-webkit-transform: translateY(var(--dometer)) translateZ(0);
+			transform: translateY(0) translateZ(0);
+			transform: translateY(var(--dometer)) translateZ(0)
+		}
+
+.icon{
+    font-family: iconfont;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.ico{
+    font-family: iconfont;
+    font-size: 23px;
+    font-style: normal;
+}
+
+a.color:link {color: #000  }     /* 未访问的链接 */
+a.color:visited {color: #000  }  /* 已访问的链接*/
+a.color:hover {color: #00efff }   /* 当有鼠标悬停在链接上 */
+a.color:active {color: #000}  /* 被选择的链接 */
+
+/*nav导航盒子*/
+div.nav{
+    line-height: 80px;
+    font-size: 13px;
+    text-align: center;
+    float: right;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+/*nav-main*/
+ul.nav-main{
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+/*导航条设置*/
+ul.nav-main>li{
+    width: 116px;
+    height: 100%;
+    display: block;
+    float: left;
+    margin: 3px 8px 0 0;
+    cursor: pointer;
+}
+ul.nav-main>li:hover{
+    background: none;
+}
+/*隐藏盒子设置*/
+div.hidden-box{
+    width: 118px;
+    line-height: 36px;
+    border: 1px solid #FDE615;
+    border-top: 0;
+    position: absolute;
+    display:none;
+    background: rgba(30, 30, 30, 0.88);
+    top: 80px;
+    z-index:9;
+    font-size: 15px;
+}
+.hidden-box>ul{
+    list-style-type: none;
+    cursor: pointer;
+}
+.hidden-box li:hover{
+    background: #FDE615;
+    color: #000;
+}
+/*隐藏盒子位置设置*/
+.hidden1{
+    right: 602px;
+}
+.hidden2{
+    right: 480px;
+}
+.hidden3{
+    right: 356px;
+}
+.box04{
+    left:485px;
+}
+.ulfont{
+    color: #12E9FF;
+}
+
+.di {
+    position: absolute;
+    color: #000;
+    width: 100%;
+    padding-top: 30px;
+    clear: both;
+    bottom: 6px;
+}
+.dii {
+    color: #000;
+    width: 1349px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 6px;
+    text-align: center;
+}
+.foot{
+    color: #000;
+}
+
+.signin{
+    position: absolute;
+    color: #fff;
+    top:42.5%;
+    left: 57%;
+    font-size: 26px;
+}
+
+.fsvg{
+    text-align: center;
+    vertical-align: center;
+    letter-spacing: 3px;
+    line-height: 39px;
+    float:left;
+    font-size: 17px;
+    margin-left: 0px;
+    width: 108px;
+    height: 36px;
+    color: #fff;
+    background-color: #00a2ff;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    cursor: pointer;
+}
+
+.indexFindbar {
+    float: left;
+    font-family: "微软雅黑";
+    font-size:17px;
+    color: #666;
+    width:417px;
+    height:36px;
+    border:0;
+    outline: none;
+}
+.findxz {
+    width: 68px;
+    height: 39px;
+    float:left;
+    margin: 0 63px 0 0;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.fill{
+    width:10px;
+    float:left;
+    height:36px;
+    background:#FFF;
+}
+
+.name{
+    float: left;
+    width: 100%;
+    margin: 15% 0 0 1px;
+    padding: 0 auto;
+    border-width:0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "微软雅黑 Light";
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.toptag{
+    float: right;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.sign{
+    float: right;
+    margin: 28px 20px 0 0;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "微软雅黑 Light";
+    letter-spacing: 8px;
+    vertical-align: middle;
+    color: #000;
+}
+.signbutton{
+    width: 90px;
+    height: 30px;
+    padding: 0 auto;
+    background: none;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.login{
+    float: right;
+    margin: 28px 0 0 0;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: "微软雅黑 Light";
+    letter-spacing: 8px;
+    vertical-align: middle;
+    color: #000;
+}
+.loginbutton{
+    width: 90px;
+    height: 30px;
+    padding: 0 auto;
+    background: none;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.bgdiv{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-999;
+    background-color: #000;
+}
+
+
+.t-login{
+    width:100%;
+    height:100px;
+    background-color: #00a2ff;
+    border-top-left-radius:18px;
+    border-top-right-radius:18px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100px;
+    color: #feffa2;
+    font-size: 30px;
+    font-family: '微软雅黑','Helvetica Neue',sans-serif,SimHei;
+}
+
+.t-login-h{
+    width:100%;
+    height:108px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 108px;
+    font-size: 25px;
+    font-family: '微软雅黑','Helvetica Neue',sans-serif,SimHei;
+}
+
+.bgdiv img{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.logo{
+    float: left;
+    margin: 0px 10px 0 0;
+}
+
+.logotop{
+    float: left;
+    margin: 16px 0 0 20px;
+}
+
+.h-font{
+    float: left;
+    margin: 30px 0 0 6px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+/*CSS-LOGO*/
+.logoA{
+    width: 53px;
+    height: 53px;
+    background-color:#0ea7ff;
+    overflow:hidden;
+    border-radius: 8px;
+}
+.logoB{
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    overflow:hidden;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 8px;
+    -webkit-animation:circle 3.66s infinite linear;/*匀速*/
+    -moz-animation:circle 3.66s infinite linear;/*匀速*/
+    -o-animation:circle 3.66s infinite linear;/*匀速*/
+    animation:circle 3.66s infinite linear;/*匀速*/
+}
+.logoC{
+    width: 24px;
+    height: 24px;
+    background-color: #0ea7ff;
+    overflow:hidden;
+    border-radius: 50px;
+    margin-left: 7px;
+    margin-top: 7px;
+    -webkit-animation:circle 3.66s infinite linear;/*匀速*/
+    -moz-animation:circle 3.66s infinite linear;/*匀速*/
+    -o-animation:circle 3.66s infinite linear;/*匀速*/
+    animation:circle 3.66s infinite linear;/*匀速*/
+}
+.logoD{
+    width: 12px;
+    height: 12px;
+    background-color: #fff1aa;
+    overflow:hidden;
+    border-radius: 50px;
+    margin-left: 6px;
+    margin-top: 6px;
+    -webkit-animation:scale 3.66s infinite linear;/*匀速*/
+    -moz-animation:scale 3.66s infinite linear;/*匀速*/
+    -o-animation:scale 3.66s infinite linear;/*匀速*/
+    animation:scale 3.66s infinite linear;/*匀速*/
+}
+@-webkit-keyframes circle{
+    0%{ transform:rotate(0deg);}
+    80%{ transform:rotate(0deg);}
+    100%{ transform:rotate(90deg);}
+}
+@-moz-keyframes circle{
+    0%{ transform:rotate(0deg); }
+    80%{ transform:rotate(0deg); }
+    100%{ transform:rotate(90deg); }
+}
+@-o-keyframes circle{
+    0%{ transform:rotate(0deg); }
+    80%{ transform:rotate(0deg); }
+    100%{ transform:rotate(90deg); }
+}
+@keyframes circle{
+    0%{ transform:rotate(0deg); }
+    80%{ transform:rotate(0deg); }
+    100%{ transform:rotate(90deg); }
+}
+@-webkit-keyframes scale{
+    0%{ transform:scale(1);}
+    66%{ transform:scale(1);}
+    73%{ transform:scale(0.6);}
+    80%{ transform:scale(1.36);}
+    85%{ transform:scale(0.7);}
+    90%{ transform:scale(1.2);}
+    93%{ transform:scale(0.8);}
+    97%{ transform:scale(1.3);}
+    100%{ transform:scale(1);}
+}
+@keyframes scale{
+    0%{ transform:scale(1);}
+    66%{ transform:scale(1);}
+    73%{ transform:scale(0.6);}
+    80%{ transform:scale(1.36);}
+    85%{ transform:scale(0.7);}
+    90%{ transform:scale(1.2);}
+    93%{ transform:scale(0.8);}
+    97%{ transform:scale(1.3);}
+    100%{ transform:scale(1);}
+}
+
+.SCITY {
+    font-family: "微软雅黑";
+    font-size:13px;
+    color: #00a2ff;
+    border:0px solid #000;
+    width:199px;
+}
+
+.city{
+    font-size:18px;
+    letter-spacing: 3px;
+    border:0px solid #000;
+    color: white;
+    background: none;
+    cursor: pointer;
+}

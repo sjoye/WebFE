@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>cosmos</title>
+
+	<script src="./base-min.js">
+	</script>
+
+	<script>
+		if(!isMobile){
+    window.onresize = function(){
+      if(window.innerWidth < 768){
+        window.isMobile = true;
+      }else{
+        window.isMobile = false;
+      }
+    }
+  }
+
+	</script>
+
+	<link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+	<div class="space J_Module">
+		<div class="module-wrap">
+			<!-- 避免用window的全局变量获取数据 -->
+			<textarea class="schemaData" style="display:none;">{"moduleinfo":{"area_count":[{"count_phone":8,"count":8}]}}</textarea>
+      
+         <div class="inner">
+
+            <div class="topbar">
+                <div class="topleft">  Space<span class="X">X</span></div>
+                <div class="topright">
+                    <a class="topr" href="">NASA</a>
+                </div>
+            </div>
+
+            <div class="title" id="title">MAKING THE WORLD A BETTER PLACE</div>
+
+          <div class="scene" id="scene"><canvas id="space"></canvas></div>
+        
+     </div>
+    </div>
+  </div>
+
+<script src="./three-min.js "></script>
+<script src="./canvas-min.js"></script>
+<script src="./x.js"></script> 
+
+<script>
+
+  $(document).ready(function(){
+    //$("#da").animate({top:'0px'},"normal");
+    $("#title").animate({top:'39%',opacity:'1'},999);   
+    //$("#title").show({ duration: 3000, })
+  });
+  
+</script>
+
+</body>
+</html>

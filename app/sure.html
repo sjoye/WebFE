@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>X</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+         #container{
+             width: 100%;
+             margin-top:80px; 
+         }
+        table {
+            padding: 0;
+            filter: blur(8px);
+            border-collapse: collapse;
+        }
+        td,tr {
+            border: 3px solid #00afff;
+            text-align: center;
+        }
+        legend{
+            text-align: center;
+        }
+        .touch{
+            background: #00afff;
+            color: white;
+            font-size: 30px;
+            animation: font 0.66s;
+        }
+        .time{
+            
+        }
+        .start{
+            position: absolute;
+            top: 29%;
+            left: 39.9%;
+            width: 199px;
+            line-height: 199px;
+            text-align: center;
+            font-size: 36px;
+            color: #FFF;
+            height: 199px;
+            z-index: 999;
+            border-radius: 199px;
+            background: #00afff;
+        }
+        @keyframes font {
+        0% {font-size: 30px;}
+        50% {font-size: 45px;}
+        100% {font-size: 30px;}
+        }
+   </style>
+</head>
+<body>
+    <div class="m-form">
+        <form>
+          <fieldset>
+            <legend>舒尔特方格小游戏</legend>
+              <button type="button" onclick="create()" id="reset">重来</button>
+                <input type="text" value="00:00" class="time">
+          </fieldset>
+        </form>
+      </div>
+
+        <div id="start" class="start">点我开始</div>
+
+      <div id="container"></div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+    var pre = 0;
+    //格子生成
+    function create() {
+        var $ = selector => document.getElementById(selector);
+        var $$ = (selector, value) => +$(selector).value || value;
+        $( "container").innerHTML = "";
+
+        var size = 5;     //X*X大小
+        var matrix = [];
+        for (let i = 1; i <= size * size; i++) {
+            matrix.push(i);
+        }
+        for (let i = 0; i < 1; i++) {
+                var arr = matrix.concat([]);
+                var table = document.createElement("table");
+                table.style.margin = "0 auto";
+                table.style.fontSize = "25px";
+                for (let r = 0; r < size; r++) {
+                var tr = document.createElement("tr");
+                for (let d = 0; d < size; d++) {
+                    var td = document.createElement("td");
+                    td.style.width = (300 / size) + "px";
+                    td.style.height = (300 / size) + "px";
+                    var rand = Math.floor(Math.random() * 100);
+                    var index = rand % arr.length;
+                    var num = arr[index];
+                    arr.splice(index, 1);
+                    td.innerText = num.toString();
+                    td.setAttribute("data-id",num);
+                    td.setAttribute("id",num);
+                    td.setAttribute("onclick","touch(this)");
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+            document.getElementById("container").appendChild(table);
+        }
+    }
+
+    function touch(dom) {
+        var id = $(event.target).data("id");
+        var oid = "#" + (id-1);
+        var dom = $(dom);
+            if(id === pre + 1){
+                pre++;
+                $(oid).toggleClass("touch");
+                $(dom).toggleClass("touch");        
+            }
+    }
+
+    $(document).ready(function(){
+        create();
+    });
+
+    var time=document.getElementsByTagName("input")[0];
+    var begin=document.getElementById("start");
+    var reset=document.getElementById("reset");
+    var n= 0, timer=null;
+    //开始计时
+    begin.onclick = function () {
+        $("table").css('filter','blur(0px)');
+        $("#start").css('display','none');
+        clearInterval(timer);
+        timer=setInterval(function () {
+            n++;
+            var m=parseInt(n/60);
+            var s=parseInt(n%60);
+            time.value=toDub(m)+":"+toDub(s);
+        },1000/60);
+    };
+    //暂停并且清空计时器
+    function stop() {
+        clearInterval(timer);
+    }
+
+     function reset() {
+        time.value="00:00";
+        n=0;
+    }
+    //补零
+    function toDub(n){
+        return n<10?"0"+n:""+n;
+    }
+
+</script>
+</body>
+</html>
