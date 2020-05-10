@@ -2,20 +2,35 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    color: white;
 }
 
 header{
     width: 100%;
     height: 30px;
     backdrop-filter: blur(16px);
+    background: rgba(0, 0, 0, 0.28);
+}
+
+aside{
+    width: 300px;
+    height: 888px;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.head-left{
-    width: 50px;
+#head-left{
+    float: left;
+    width: 120px;
+    margin: 5px 0 0 16px;
+    font-size: 12px;
 }
 
-.head-left embed{
+#head-sider{
+    width: 50px;
+    float: right;
+}
+
+#head-sider embed{
     margin: 5px 0 0 16px;
 }
 
@@ -36,13 +51,25 @@ header{
 
 #dock li {
     float: left;
-    cursor: move;
+    cursor: pointer;
     margin: 2.8px 6px;
     transition: all 0.36s;
 }
 
-#dock li:hover {
-    margin: -10px 6px 0 6px;
+.lihover{
+    margin: -3px 6px 0 6px !important;
+}
+
+#dock li:hover{
+    margin: -18px 6px 0 6px;
+}
+
+#dock li img:hover{
+    transition: all 0.1s;
+}
+
+#dock li:hover + li{
+    margin: -3px 6px 0 6px;
 }
 
 #dock img{
