@@ -21,10 +21,10 @@ node.ondragover = function (event) {
                     return;
                 }
             }
-            if (order(draging) < order(target)) {
+            if(order(draging) < order(target) && draging.nodeName === "LI") {
                 node.insertBefore(draging, target.nextSibling);
                 $('#dock li').removeClass('lihover');
-            } else {
+            } else if(order(draging) >= order(target) && draging.nodeName === "LI"){
                 node.insertBefore(draging, target);
                 $('#dock li').removeClass('lihover');
             }
