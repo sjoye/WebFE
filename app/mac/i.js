@@ -104,6 +104,14 @@ $('ul li').hover(function () {
 }, function () {
     $(this).prev().removeClass('lihover');
 })
+$('ul li').mousedown(function () {
+    $(this).prev().addClass('clearho');
+})
+$('ul li').mouseup(function () {
+    $('#dock li').removeClass('clearho');
+})
+
+
 
 function side(){
     $('aside').toggleClass('aside-show');  

@@ -68,6 +68,10 @@ aside{
     margin: -3px 6px 0 6px !important;
 }
 
+.clearho{
+    margin: 2.8px 6px !important;
+}
+
 #dock li:hover{
     margin: -18px 6px 0 6px;
 }
