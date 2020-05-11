@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 header{
@@ -15,7 +15,15 @@ header{
 aside{
     width: 300px;
     height: 888px;
+    position: absolute;
+    right: -300px;
+    transition: all 0.1s;
+    backdrop-filter: blur(16px);
     background: rgba(0, 0, 0, 0.6);
+}
+
+.aside-show{
+    right: 0;
 }
 
 #head-left{
@@ -79,7 +87,9 @@ aside{
 body {
     width: 100%;
     height: 980px;
+    overflow-x: hidden;
     overflow-y: hidden;
     background: url(./img/bg.jpg) no-repeat;
     background-size:100% 100%; 
 }
+

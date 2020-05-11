@@ -105,21 +105,6 @@ $('ul li').hover(function () {
     $(this).prev().removeClass('lihover');
 })
 
-function ok(){
-    $.ajax({
-    type: 'GET',
-    url: 'http://49.234.170.52/register/username/',
-    data: {username: $("#zh").val()},
-    success: function (data) {
-        var json = JSON.parse(data);
-        if (json.status == 1) {
-            mz = 0;
-            cn('该账号不存在噢亲::>_<::');
-            $('#zhk').css('border', '2px solid #FF6C6C');
-        } else {
-            mz = 1;
-        }
-    }
-});
+function side(){
+    $('aside').toggleClass('aside-show');  
 }
-
