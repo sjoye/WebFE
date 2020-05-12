@@ -8,6 +8,10 @@ node.ondragstart = function (event) {
     draging = event.target.parentNode;
 }
 
+node.ondragend = function (event) {
+    $('#dock li').removeClass('clearho');
+}
+
 node.ondragover = function (event) {
     event.preventDefault();
     var target = event.target.parentNode;
@@ -33,6 +37,8 @@ node.ondragover = function (event) {
         }
     }
 }
+
+
 
 //获取元素在父元素中的index
 function order(el) {
@@ -104,6 +110,7 @@ $('ul li').hover(function () {
 }, function () {
     $(this).prev().removeClass('lihover');
 })
+
 $('ul li').mousedown(function () {
     $(this).prev().addClass('clearho');
 })
