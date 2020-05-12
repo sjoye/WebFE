@@ -42,6 +42,12 @@ aside{
     margin: 5px 0 0 16px;
 }
 
+#timer{
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+}
+
 #dock {
     width: auto;
     height: 50px;
