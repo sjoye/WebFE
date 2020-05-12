@@ -26,10 +26,10 @@ node.ondragover = function (event) {
                     return;
                 }
             }
-            if(order(draging) < order(target) && draging.nodeName === "LI") {
+            if (order(draging) < order(target) && draging.nodeName === "LI") {
                 node.insertBefore(draging, target.nextSibling);
                 $('#dock li').removeClass('lihover');
-            } else if(order(draging) >= order(target) && draging.nodeName === "LI"){
+            } else if (order(draging) >= order(target) && draging.nodeName === "LI") {
                 node.insertBefore(draging, target);
                 $('#dock li').removeClass('lihover');
             }
@@ -105,27 +105,32 @@ function _css(el, prop, val) {
     }
 }
 
-//Dock动效控制
-$('ul li').hover(function () {
-    $(this).prev().addClass('lihover');
-}, function () {
-    $(this).prev().removeClass('lihover');
-})
-$('ul li').mousedown(function () {
-    $('#dock li').addClass('clearho');
-})
 
-
-
-function side(){
-    $('aside').toggleClass('aside-show');  
+function side() {
+    $('aside').toggleClass('aside-show');
 }
 
-//时钟
-$(function(){
+
+$(function () {
     clock();
+
+    //Dock动效控制
+    $('#dock li').hover(function () {
+        $(this).prev().addClass('lihover');
+    }, function () {
+        $(this).prev().removeClass('lihover');
+    })
+    $('#dock li').on({
+        mousedown: function () {
+            $('#dock li').addClass('clearho');
+        },
+        mouseup: function () {
+            $('#dock li').removeClass('clearho');
+        },
+    });
 })
 
+//时钟
 function clock() {
     var now = new Date();
     var year = now.getFullYear(); //得到年份
@@ -135,7 +140,7 @@ function clock() {
     var hour = now.getHours();//得到小时
     var minu = now.getMinutes();//得到分钟
     var sec = now.getSeconds();//得到秒
-　　     var MS = now.getMilliseconds();//获取毫秒
+    var MS = now.getMilliseconds();//获取毫秒
     var week;
     month = month + 1;
     if (month < 10) month = "0" + month;
@@ -146,9 +151,11 @@ function clock() {
     var arr_week = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六");
     week = arr_week[day];
     var time = "";
-    time = week + " " + month + "-" + date + " " + hour + ":" + minu + ":" + sec;
-    //当前日期赋值给当前日期输入框中（jQuery easyUI）
+    time = week + " " + hour + ":" + minu + ":" + sec;
+    today = year + "-" + month + "-" + date + " " + week;
+    //当前日期赋值
     $("#timer").html(time);
+    $("#today").html(today);
     //设置得到当前日期的函数的执行间隔时间，每1000毫秒刷新一次。
     setTimeout("clock()", 1000);
-  }
+}
