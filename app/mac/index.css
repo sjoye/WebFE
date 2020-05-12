@@ -16,14 +16,13 @@ aside{
     width: 360px;
     height: 1200px;
     position: absolute;
-    display: none;
-    transition: all 0.18s ease-out;
+    right: -360px;
+    transition: all 0.2s ease-out;
     backdrop-filter: blur(16px);
     background: rgba(0, 0, 0, 0.6);
 }
 
 .aside-show{
-    display: block;
     right: 0;
 }
 
@@ -51,6 +50,12 @@ aside{
 }
 
 #timer{
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+#user{
     float: right;
     line-height: 30px;
     font-size: 14px;
