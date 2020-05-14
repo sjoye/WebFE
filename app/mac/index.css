@@ -30,10 +30,11 @@ aside {
     backdrop-filter: blur(16px);
     background: rgba(0, 0, 0, 0.6);
     transition-timing-function: ease;
-    transition-duration: 0.36s;
-    -moz-transition-duration: 0.36s; /* Firefox 4 */
--webkit-transition-duration: 0.36s; /* Safari 和 Chrome */
--o-transition-duration: 0.36s; /* Opera */
+    transition-duration: 0.28s;
+    -o-transition-duration: 0.28s;
+    -moz-transition-duration: 0.28s;
+    /* Safari 和 Chrome */
+    -webkit-transition-duration: 0.28s;
 }
 
 .aside-show {
@@ -69,7 +70,7 @@ aside {
     position: absolute;
 }
 
-.menu:nth-child(odd){
+.menu:nth-child(odd) {
     border-bottom: 1px solid white;
 }
 
@@ -78,10 +79,10 @@ aside {
     line-height: 30px;
     padding: 0 10px;
     font-size: 13px;
-    background-color: rgba(0, 0, 0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.menu:hover{
+.menu:hover {
     background-color: rgb(32, 192, 255);
 }
 

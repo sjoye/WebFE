@@ -137,7 +137,7 @@ function clock() {
     var year = now.getFullYear(); //得到年份
     var month = now.getMonth();//得到月份
     var date = now.getDate();//得到日期
-    var day = now.getDay();//得到周几
+    var day = now.getDay();//得到星期
     var hour = now.getHours();//得到小时
     var minu = now.getMinutes();//得到分钟
     var sec = now.getSeconds();//得到秒
