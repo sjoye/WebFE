@@ -62,11 +62,15 @@ aside {
     background: transparent;
 }
 
+#user-box {
+    padding: 18px 0;
+}
+
 #menu {
     width: 150px;
     height: 0;
     overflow: hidden;
-    box-shadow: 0 1px 1px #888, 1px 0 1px #ccc;
+    /* box-shadow: 0 1px 1px #888, 1px 0 1px #ccc; */
     position: absolute;
 }
 
@@ -83,7 +87,8 @@ aside {
 }
 
 .menu:hover {
-    background-color: rgb(32, 192, 255);
+    background-color: #00a1ff;
+    ;
 }
 
 #user-box:hover button {
