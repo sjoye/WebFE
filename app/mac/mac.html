@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="./index.css"/>
+    <link rel="stylesheet" href="./index.css" />
 </head>
 
 <body>
     <header>
         <div id="head-left">
-            <embed src="./img/apple.svg" width="20" height="20" type="image/svg+xml"/>
+            <embed src="./img/apple.svg" width="20" height="20" type="image/svg+xml" />
             <!-- Mac云桌面 -->
         </div>
-        
+
         <div id="head-sider" onclick="side()">
-            <embed src="./img/sider.svg" width="20" height="20" style="pointer-events: none;" type="image/svg+xml"/>
+            <embed src="./img/sider.svg" width="20" height="20" style="pointer-events: none;" type="image/svg+xml" />
         </div>
         <div id="timer"></div>
         <div id="user">
@@ -31,16 +31,28 @@
             <div id="tx">
                 <img src="./img/tx.jpg">
             </div>
-            <button>666</button>
-            <button>666</button>
+            <div class="ubox">
+                <button>我的账户</button>
+                <p>鱼666666仔</p>
+                <button>退出登录</button>
+            </div>
+
         </div>
     </aside>
+
+    <div id="menu">
+        <div class="menu">新建</div>
+        <div class="menu">个性化</div>
+        <div class="menu" id="full" onclick="full()">全屏模式</div>
+        <div class="menu">系统设置</div>
+        <div class="menu">关于云桌面</div>
+    </div>
 
     <ul id="dock">
         <li draggable="true"><img src="./img/g.png" width="50px"></li>
         <li draggable="true"><img src="./img/a.png" width="50px"></li>
         <li draggable="true"><img src="./img/e.png" width="50px"></li>
-        <li draggable="true"><img src="./img/b.png" width="50px"></li>
+        <li draggable="true"><img src="./img/f.png" width="50px"></li>
         <li draggable="true"><img src="./img/d.png" width="50px"></li>
         <li draggable="true"><img src="./img/c.png" width="50px"></li>
     </ul>

@@ -5,14 +5,23 @@
     color: white;
 }
 
-header{
+body {
+    width: 100%;
+    height: 1080px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: url(./img/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+header {
     width: 100%;
     height: 30px;
     backdrop-filter: blur(16px);
     background: rgba(0, 0, 0, 0.28);
 }
 
-aside{
+aside {
     width: 360px;
     height: 1200px;
     position: absolute;
@@ -22,27 +31,75 @@ aside{
     background: rgba(0, 0, 0, 0.6);
 }
 
-.aside-show{
+.aside-show {
     right: 0;
 }
 
-#user-box{
-    width: 100%;
+.ubox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#tx{
+.ubox p {
+    margin: 0;
+    transition: all 0.3s;
+}
+
+.ubox button {
     width: 80px;
+    color: #7dedff;
+    border-radius: 8px;
+    line-height: 25px;
+    opacity: 0;
+    transition: all 0.18s;
+    background: transparent;
+}
+
+#menu {
+    width: 150px;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 1px #888, 1px 0 1px #ccc;
+    position: absolute;
+}
+
+.menu:nth-child(odd){
+    border-bottom: 1px solid white;
+}
+
+.menu {
+    width: 150px;
+    line-height: 30px;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0,0.8);
+}
+
+.menu:hover{
+    background-color: rgb(32, 192, 255);
+}
+
+#user-box:hover button {
+    opacity: 1;
+}
+
+#user-box:hover p {
+    margin: 0 18px;
+}
+
+#tx {
+    width: 66px;
     margin: 0 auto;
-    border-radius: 80px;
+    border-radius: 66px;
     overflow: hidden;
 }
 
-#tx img{
-    width: 80px;
-    border-radius: 80px;
+#tx img {
+    width: 66px;
+    border-radius: 66px;
 }
 
-#today{
+#today {
     width: 100%;
     line-height: 100px;
     text-align: center;
@@ -50,29 +107,29 @@ aside{
     font-size: 30px;
 }
 
-#head-left{
+#head-left {
     float: left;
     width: 120px;
     margin: 5px 0 0 16px;
     font-size: 12px;
 }
 
-#head-sider{
+#head-sider {
     width: 50px;
     float: right;
 }
 
-#head-sider embed{
+#head-sider embed {
     margin: 5px 0 0 16px;
 }
 
-#timer{
+#timer {
     float: right;
     line-height: 30px;
     font-size: 14px;
 }
 
-#user{
+#user {
     float: right;
     line-height: 30px;
     font-size: 14px;
@@ -101,36 +158,26 @@ aside{
     transition: all 0.36s;
 }
 
-.lihover{
+.lihover {
     margin: -3px 6px 0 6px !important;
 }
 
-.clearho{
+.clearho {
     margin: 2.8px 6px !important;
 }
 
-#dock li:hover{
+#dock li:hover {
     margin: -18px 6px 0 6px;
 }
 
-#dock li img:hover{
+#dock li img:hover {
     transition: all 0.1s;
 }
 
-#dock li:hover + li{
+#dock li:hover+li {
     margin: -3px 6px 0 6px;
 }
 
-#dock img{
+#dock img {
     display: inline-block;
 }
-
-body {
-    width: 100%;
-    height: 980px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background: url(./img/bg.jpg) no-repeat;
-    background-size:100% 100%; 
-}
-

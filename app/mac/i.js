@@ -1,5 +1,6 @@
 var node = document.querySelector("#dock");
 var draging = null;
+var f = 1;
 //使用事件委托，将li的事件委托给ul
 //firefox设置了setData后元素才能拖动！
 node.ondragstart = function (event) {
@@ -158,4 +159,53 @@ function clock() {
     $("#today").html(today);
     //设置得到当前日期的函数的执行间隔时间，每1000毫秒刷新一次。
     setTimeout("clock()", 1000);
+}
+
+//右键禁用，自定菜单
+window.oncontextmenu = function (e) {
+    e.preventDefault();
+    var menu = document.querySelector("#menu");
+    menu.style.left = e.clientX + 'px';
+    menu.style.top = e.clientY + 'px';
+    menu.style.height = '150px';
+}
+
+window.onclick = function (e) {
+    document.querySelector('#menu').style.height = 0;
+}
+
+function full() {
+    f++;
+    var docElm = document.documentElement;
+    if (f%2 == 0) {
+        $("#full").html("退出全屏");
+        //W3C
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        }
+        //FireFox
+        else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        }
+        //Chrome等
+        else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        }
+        //IE11
+        else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    }else{
+        $("#full").html("全屏模式");
+        if(document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if(document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if(document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if(document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+
 }
