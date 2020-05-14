@@ -174,11 +174,13 @@ window.onclick = function (e) {
     document.querySelector('#menu').style.height = 0;
 }
 
+function isfull(){
+    return document.isFullScreen || document.mozIsFullScreen || document.msIsFullScreen || document.webkitIsFullScreen;
+}
+
 function full() {
-    f++;
     var docElm = document.documentElement;
-    if (f%2 == 0) {
-        $("#full").html("退出全屏");
+    if (!isfull()){
         //W3C
         if (docElm.requestFullscreen) {
             docElm.requestFullscreen();
@@ -196,7 +198,6 @@ function full() {
             elem.msRequestFullscreen();
         }
     }else{
-        $("#full").html("全屏模式");
         if(document.exitFullscreen) {
             document.exitFullscreen();
         } else if(document.mozCancelFullScreen) {
