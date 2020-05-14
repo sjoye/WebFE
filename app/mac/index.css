@@ -25,14 +25,19 @@ aside {
     width: 360px;
     height: 1200px;
     position: absolute;
-    right: -360px;
-    transition: all 0.2s ease-out;
+    right: 0;
+    transform: translate3d(360px, 0px, 0px);
     backdrop-filter: blur(16px);
     background: rgba(0, 0, 0, 0.6);
+    transition-timing-function: ease;
+    transition-duration: 0.36s;
+    -moz-transition-duration: 0.36s; /* Firefox 4 */
+-webkit-transition-duration: 0.36s; /* Safari 和 Chrome */
+-o-transition-duration: 0.36s; /* Opera */
 }
 
 .aside-show {
-    right: 0;
+    transform: translate3d(0px, 0px, 0px);
 }
 
 .ubox {
@@ -48,7 +53,7 @@ aside {
 
 .ubox button {
     width: 80px;
-    color: #7dedff;
+    color: #0ab2ff;
     border-radius: 8px;
     line-height: 25px;
     opacity: 0;
@@ -72,6 +77,7 @@ aside {
     width: 150px;
     line-height: 30px;
     padding: 0 10px;
+    font-size: 13px;
     background-color: rgba(0, 0, 0,0.8);
 }
 
