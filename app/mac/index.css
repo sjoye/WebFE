@@ -86,6 +86,11 @@ aside {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.menu embed{
+    vertical-align: middle;
+    margin: -3px 0 0 0;
+}
+
 .menu:hover {
     background-color: #00a1ff;
     ;
@@ -188,8 +193,4 @@ aside {
 
 #dock li:hover+li {
     margin: -3px 6px 0 6px;
-}
-
-#dock img {
-    display: inline-block;
 }

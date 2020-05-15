@@ -174,10 +174,10 @@ window.onclick = function (e) {
     document.querySelector('#menu').style.height = 0;
 }
 
+//全屏模式
 function isfull(){
     return document.isFullScreen || document.mozIsFullScreen || document.msIsFullScreen || document.webkitIsFullScreen;
 }
-
 function full() {
     var docElm = document.documentElement;
     if (!isfull()){
