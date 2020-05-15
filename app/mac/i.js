@@ -3,18 +3,18 @@ var draging = null;
 var f = 1;
 //使用事件委托，将li的事件委托给ul
 //firefox设置了setData后元素才能拖动！
-node.ondragstart = function (event) {
+node.ondragstart = function(event) {
     event.dataTransfer.setData("te", event.target.innerText); //不能使用text，firefox会打开新tab
     //event.dataTransfer.setData("self", event.target);
     draging = event.target.parentNode;
 }
 
 //拖拽结束时处理
-node.ondragend = function (event) {
+node.ondragend = function(event) {
     $('#dock li').removeClass('clearho');
 }
 
-node.ondragover = function (event) {
+node.ondragover = function(event) {
     event.preventDefault();
     var target = event.target.parentNode;
     //因为dragover会发生在ul上，所以要判断是不是子元素
@@ -77,7 +77,7 @@ function _animate(prevRect, target) {
         _css(target, 'transition', 'all ' + ms + 'ms');
         _css(target, 'transform', 'translate3d(0,0,0)');
         clearTimeout(target.animated);
-        target.animated = setTimeout(function () {
+        target.animated = setTimeout(function() {
             _css(target, 'transition', '');
             _css(target, 'transform', '');
             target.animated = false;
@@ -107,34 +107,33 @@ function _css(el, prop, val) {
 }
 
 
-$('#head-sider').click(function(){
-    $('aside').toggleClass('aside-show');
-    $(this).toggleClass('side-open');
-})
-// $(document).mouseup(function (e) {
-//     var area = $('aside');   // 设置目标区域
-//     if (!area.is(e.target) && area.has(e.target).length === 0) {
-//         $('aside').removeClass('aside-show');
-//     }
-// });
+$('#head-sider').click(function() {
+        $('aside').toggleClass('aside-show');
+    })
+    // $(document).mouseup(function (e) {
+    //     var area = $('aside');   // 设置目标区域
+    //     if (!area.is(e.target) && area.has(e.target).length === 0) {
+    //         $('aside').removeClass('aside-show');
+    //     }
+    // });
 
-function apps(){
+function apps() {
     $('#apps').toggleClass('apps');
 }
 
-$(function () {
+$(function() {
     clock();
     //Dock动效控制
-    $('#dock li').hover(function () {
+    $('#dock li').hover(function() {
         $(this).prev().addClass('lihover');
-    }, function () {
+    }, function() {
         $(this).prev().removeClass('lihover');
     })
     $('#dock li').on({
-        mousedown: function () {
+        mousedown: function() {
             $('#dock li').addClass('clearho');
         },
-        mouseup: function () {
+        mouseup: function() {
             $('#dock li').removeClass('clearho');
         },
     });
@@ -144,13 +143,13 @@ $(function () {
 function clock() {
     var now = new Date();
     var year = now.getFullYear(); //得到年份
-    var month = now.getMonth();//得到月份
-    var date = now.getDate();//得到日期
-    var day = now.getDay();//得到星期
-    var hour = now.getHours();//得到小时
-    var minu = now.getMinutes();//得到分钟
-    var sec = now.getSeconds();//得到秒
-    var MS = now.getMilliseconds();//获取毫秒
+    var month = now.getMonth(); //得到月份
+    var date = now.getDate(); //得到日期
+    var day = now.getDay(); //得到星期
+    var hour = now.getHours(); //得到小时
+    var minu = now.getMinutes(); //得到分钟
+    var sec = now.getSeconds(); //得到秒
+    var MS = now.getMilliseconds(); //获取毫秒
     var week;
     month = month + 1;
     if (month < 10) month = "0" + month;
@@ -171,7 +170,7 @@ function clock() {
 }
 
 //右键禁用，自定菜单
-window.oncontextmenu = function (e) {
+window.oncontextmenu = function(e) {
     e.preventDefault();
     var menu = document.querySelector("#menu");
     menu.style.left = e.clientX + 'px';
@@ -179,7 +178,7 @@ window.oncontextmenu = function (e) {
     menu.style.height = '150px';
 }
 
-window.onclick = function (e) {
+window.onclick = function(e) {
     document.querySelector('#menu').style.height = 0;
 }
 
@@ -187,7 +186,7 @@ window.onclick = function (e) {
 function isfull() {
     return document.isFullScreen || document.mozIsFullScreen || document.msIsFullScreen || document.webkitIsFullScreen;
 }
-$('#full').click(function () {
+$('#full').click(function() {
     var docElm = document.documentElement;
     if (!isfull()) {
         //W3C
@@ -218,5 +217,3 @@ $('#full').click(function () {
         }
     }
 })
-
-

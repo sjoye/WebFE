@@ -5,11 +5,14 @@
     color: white;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
     background: url(./img/bg.jpg) no-repeat;
     background-size: 100% 100%;
 }
@@ -25,9 +28,12 @@ header {
 
 aside {
     width: 360px;
-    height: 1200px;
+    height: -webkit-calc(100% - 30px);
+    height: -moz-calc(100% - 30px);
+    height: calc(100% - 30px);
     position: absolute;
     right: 0;
+    top: 30px;
     transform: translate3d(360px, 0px, 0px);
     backdrop-filter: blur(16px);
     background: rgba(0, 0, 0, 0.6);
@@ -35,7 +41,6 @@ aside {
     transition-duration: 0.28s;
     -o-transition-duration: 0.28s;
     -moz-transition-duration: 0.28s;
-    /* Safari 和 Chrome */
     -webkit-transition-duration: 0.28s;
 }
 
@@ -55,8 +60,7 @@ aside {
 }
 
 .ubox button {
-    width: 80px;
-    color: #0ab2ff;
+    padding: 0 16px;
     border-radius: 8px;
     line-height: 25px;
     opacity: 0;
@@ -64,9 +68,9 @@ aside {
     background: transparent;
 }
 
-#apps{
+#apps {
     width: 100%;
-    height: 1000px;
+    height: 100%;
     z-index: 988;
     display: none;
     position: fixed;
@@ -74,7 +78,7 @@ aside {
     background: rgba(0, 0, 0, 0.18);
 }
 
-.apps{
+.apps {
     opacity: 1 !important;
     display: block !important;
 }
@@ -103,7 +107,7 @@ aside {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.menu embed{
+.menu embed {
     vertical-align: middle;
     margin: -3px 0 0 0;
 }
@@ -158,7 +162,7 @@ aside {
     margin: 5px 0 0 16px;
 }
 
-.side-open{
+.side-open {
     transform: rotate(90deg);
 }
 
