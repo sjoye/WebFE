@@ -178,7 +178,7 @@ window.onclick = function (e) {
 function isfull(){
     return document.isFullScreen || document.mozIsFullScreen || document.msIsFullScreen || document.webkitIsFullScreen;
 }
-function full() {
+$('#full').click(function(){
     var docElm = document.documentElement;
     if (!isfull()){
         //W3C
@@ -208,5 +208,6 @@ function full() {
             document.msExitFullscreen();
         }
     }
+})
 
-}
+
