@@ -107,14 +107,23 @@ function _css(el, prop, val) {
 }
 
 
-function side() {
+$('#head-sider').click(function(){
     $('aside').toggleClass('aside-show');
-}
+    $(this).toggleClass('side-open');
+})
+// $(document).mouseup(function (e) {
+//     var area = $('aside');   // 设置目标区域
+//     if (!area.is(e.target) && area.has(e.target).length === 0) {
+//         $('aside').removeClass('aside-show');
+//     }
+// });
 
+function apps(){
+    $('#apps').toggleClass('apps');
+}
 
 $(function () {
     clock();
-
     //Dock动效控制
     $('#dock li').hover(function () {
         $(this).prev().addClass('lihover');
@@ -175,12 +184,12 @@ window.onclick = function (e) {
 }
 
 //全屏模式
-function isfull(){
+function isfull() {
     return document.isFullScreen || document.mozIsFullScreen || document.msIsFullScreen || document.webkitIsFullScreen;
 }
-$('#full').click(function(){
+$('#full').click(function () {
     var docElm = document.documentElement;
-    if (!isfull()){
+    if (!isfull()) {
         //W3C
         if (docElm.requestFullscreen) {
             docElm.requestFullscreen();
@@ -197,14 +206,14 @@ $('#full').click(function(){
         else if (elem.msRequestFullscreen) {
             elem.msRequestFullscreen();
         }
-    }else{
-        if(document.exitFullscreen) {
+    } else {
+        if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else if(document.mozCancelFullScreen) {
+        } else if (document.mozCancelFullScreen) {
             document.mozCancelFullScreen();
-        } else if(document.webkitCancelFullScreen) {
+        } else if (document.webkitCancelFullScreen) {
             document.webkitCancelFullScreen();
-        } else if(document.msExitFullscreen) {
+        } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }
     }
